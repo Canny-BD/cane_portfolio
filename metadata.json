@@ -1,0 +1,8 @@
+{
+  "name": "Canny Portfolio - Kazi Yasin Iqbal",
+  "description": "A world-class professional portfolio for Kazi Yasin Iqbal (Canny), featuring his 15-year career as a Designer, Video Editor, and Journalist with AI-powered interactive chat.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
