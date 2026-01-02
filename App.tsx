@@ -43,15 +43,18 @@ const App: React.FC = () => {
       <nav className={`fixed w-full z-40 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <a href="#" className="block h-8 md:h-10">
+            <a href="#" className="flex items-center h-10 md:h-12 overflow-hidden">
               <img 
                 src={PROFILE.logoUrl} 
                 alt="CAN-E Logo" 
-                className={`h-full w-auto transition-all ${darkMode ? 'brightness-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]' : 'drop-shadow-sm'}`}
+                className={`h-full w-auto object-contain transition-all duration-300 ${darkMode ? 'brightness-125' : 'brightness-100'}`}
                 onError={(e) => {
-                  // Fallback to text if image fails to load
-                  (e.target as HTMLImageElement).style.display = 'none';
-                  (e.target as HTMLImageElement).parentElement!.innerHTML = '<span class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">CAN-E.</span>';
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = '<span class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">CAN-E.</span>';
+                  }
                 }}
               />
             </a>
@@ -145,7 +148,7 @@ const App: React.FC = () => {
             </div>
           </div>
           <div className="order-1 md:order-2 relative">
-            <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
               <img 
                 src={PROFILE.photoUrl} 
                 alt={PROFILE.name}
@@ -413,10 +416,14 @@ const App: React.FC = () => {
              <img 
                 src={PROFILE.logoUrl} 
                 alt="CAN-E Logo" 
-                className={`h-full w-auto ${darkMode ? 'brightness-110 drop-shadow-[0_0_10px_rgba(255,255,255,0.25)]' : 'drop-shadow-md'}`}
+                className={`h-full w-auto object-contain ${darkMode ? 'brightness-125' : 'brightness-100'}`}
                 onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
-                  (e.target as HTMLImageElement).parentElement!.innerHTML = '<span class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">CAN-E.</span>';
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = '<span class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">CAN-E.</span>';
+                  }
                 }}
               />
           </div>

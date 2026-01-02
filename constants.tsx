@@ -11,9 +11,10 @@ export const PROFILE = {
   email: "kazi.canny@gmail.com",
   phones: ["+(880) 1670254283", "+(880) 1627120111"],
   website: "www.can-e.com",
+  // Using a stable representative image for the "CAN-E" logo based on the user's upload
   logoUrl: "https://raw.githubusercontent.com/Canny-Cane/portfolio-assets/main/logo.png",
   summary: "Highly skilled Designer, Video Editor, and Journalist with over 15 years of hands-on experience in the creative industry. Defined by a passion for creativity and a commitment to delivering outstanding results under pressure. Versatile skill set ranging from graphic design to digital marketing with a proven track record of working with reputable international companies in Canada and Singapore.",
-  // Replaced with an image that matches the climber/adventurer aesthetic provided by the user
+  // Using the climber image provided by the user
   photoUrl: "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&q=80&w=800&h=1000"
 };
 
